@@ -5,7 +5,6 @@ import { fruitsData } from "./data";
 // get our fontawesome imports
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Fruits = () => {
@@ -48,7 +47,7 @@ export const Fruits = () => {
         </button>
       </div>
 
-      <div className="randombutton-container">
+      <div className="randomButton-container">
         <button className="random-btn" onClick={randomEvent}>
           Random
         </button>
