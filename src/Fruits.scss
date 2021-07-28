@@ -1,0 +1,76 @@
+.review {
+  width: 800px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+
+  .img-container {
+    padding-top: 20px;
+    text-align: center;
+
+    img {
+      margin-top: 20px;
+      border-radius: 200px;
+      box-shadow: 8px -14px 0px 0 #03a9f4b3;
+    }
+
+    h4 {
+      font-size: 1.5em;
+      color: #1d2b73;
+      text-align: center;
+      letter-spacing: 0.4em;
+      margin: 0;
+    }
+
+    P {
+      &.color {
+        text-align: center;
+        color: #03a9f4b3;
+        margin: 0;
+      }
+
+      &.info {
+        text-align: center;
+        color: #1d2b73;
+      }
+    }
+  }
+
+  .button-container {
+    width: 70px;
+    margin: auto;
+
+    .prev-btn {
+      border: none 0px;
+      font-size: 2em;
+      background-color: white;
+      color: #03a9f4b3;
+      cursor: pointer;
+    }
+
+    .next-btn {
+      border: none 0px;
+      font-size: 2em;
+      background-color: white;
+      color: #03a9f4b3;
+      cursor: pointer;
+    }
+  }
+}
+
+.randombutton-container {
+  width: 100px;
+  margin: auto;
+
+  .random-btn {
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 100px;
+    border-color: #03a9f4b3;
+    color: #03a9f4b3;
+    background-color: white;
+    cursor: pointer;
+  }
+}
