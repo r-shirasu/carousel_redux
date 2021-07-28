@@ -1,5 +1,5 @@
 import "./Fruits.scss";
-import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { fruitsData } from "./data";
 
 // get our fontawesome imports
@@ -8,26 +8,18 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Fruits = () => {
-  const [count, setCount] = useState(0);
+  const count = useSelector((state) => state.fruitsDataNum);
+  const dispatch = useDispatch();
 
   const increase = () => {
-    if (count >= fruitsData.length - 1) {
-      setCount(0);
-    } else {
-      setCount(count + 1);
-    }
+    dispatch({ type: "INCREASE_COUNT" });
   };
-
   const decrease = () => {
-    if (count === 0) {
-      setCount(fruitsData.length - 1);
-    } else {
-      setCount(count - 1);
-    }
+    dispatch({ type: "DECREASE_COUNT" });
   };
 
   const randomEvent = () => {
-    setCount(Math.floor(Math.random() * fruitsData.length));
+    dispatch({ type: "RANDOM_COUNT" });
   };
 
   return (
