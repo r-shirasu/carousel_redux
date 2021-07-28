@@ -8,20 +8,20 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "INCREASE_COUNT":
-      if (state >= fruitsData.length - 1) {
-        return { fruitsDataNum: (state.fruitsDataNum = 0) };
+      if (state.fruitsDataNum >= fruitsData.length - 1) {
+        return { fruitsDataNum: 0 };
       } else {
         return { fruitsDataNum: state.fruitsDataNum + 1 };
       }
 
     case "DECREASE_COUNT":
-      if (state === 0) {
+      if (state.fruitsDataNum === 0) {
         return { fruitsDataNum: fruitsData.length - 1 };
       } else {
         return { fruitsDataNum: state.fruitsDataNum - 1 };
       }
 
-    case "RANDOM_EVENT":
+    case "RANDOM_COUNT":
       return { fruitsDataNum: Math.floor(Math.random() * fruitsData.length) };
     default:
       return state;
