@@ -1,7 +1,7 @@
 import "./App.scss";
 import { Fruits } from "./Fruits";
 
-function App() {
+export const App = () => {
   return (
     <section className="container">
       <div className="title">
@@ -11,6 +11,4 @@ function App() {
       <Fruits />
     </section>
   );
-}
-
-export default App;
+};

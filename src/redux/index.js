@@ -29,6 +29,4 @@ const reducer = (state = initialState, action) => {
 };
 
 // 作成したreducerをcreateStoreの引数として設定し、reducerが保持しているstateをstoreの中に保管する
-const store = createStore(reducer);
-
-export default store;
+export const store = createStore(reducer);
